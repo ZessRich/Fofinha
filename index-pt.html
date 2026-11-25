@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pra voce 🤍</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden}
+body{color:#f6eefe;font-family:'Playfair Display',Georgia,serif;
+background:
+radial-gradient(60% 50% at 18% 20%,rgba(120,60,210,.16),transparent 62%),
+radial-gradient(50% 50% at 82% 72%,rgba(40,90,210,.15),transparent 62%),
+radial-gradient(40% 35% at 62% 8%,rgba(230,80,170,.1),transparent 65%),
+#010006}
+#sky{position:fixed;inset:0;width:100%;height:100%}
+.wrap{position:fixed;transform:rotate(var(--r)) scaleY(var(--s));pointer-events:none}
+.gal{width:100%;height:100%;border-radius:50%;animation:spin var(--t) linear infinite;
+background:radial-gradient(circle,#fff 0 3%,rgba(255,210,250,.85) 7%,transparent 48%),
+conic-gradient(from 0deg,transparent,rgba(170,120,255,.8),transparent 25%,rgba(255,120,200,.7) 40%,transparent 55%,rgba(120,180,255,.7) 75%,transparent);
+-webkit-mask:radial-gradient(circle,#000 25%,transparent 68%);mask:radial-gradient(circle,#000 25%,transparent 68%);opacity:.5}
+@keyframes spin{to{transform:rotate(360deg)}}
+.w1{--r:-25deg;--s:.45;--t:140s;width:380px;height:380px;left:-110px;top:6%}
+.w2{--r:20deg;--s:.55;--t:180s;width:300px;height:300px;right:-80px;bottom:8%}
+.w3{--r:-10deg;--s:.6;--t:220s;width:200px;height:200px;right:12%;top:4%}
+.planet{position:fixed;border-radius:50%;pointer-events:none;animation:float 9s ease-in-out infinite}
+.p1{width:92px;height:92px;left:10%;bottom:14%;background:
+radial-gradient(circle at 36% 32%,rgba(0,0,0,.14) 0 9%,transparent 10%),
+radial-gradient(circle at 66% 62%,rgba(0,0,0,.16) 0 11%,transparent 12%),
+radial-gradient(circle at 30% 30%,#fff,#d9dbe8 45%,#7b7f99 100%);box-shadow:0 0 40px 6px rgba(220,225,255,.35)}
+.p2{width:120px;height:120px;right:9%;top:38%;background:radial-gradient(circle at 40% 40%,#fff6b0,#ffc83a 45%,#ff7a1a 100%);box-shadow:0 0 60px 20px rgba(255,170,40,.45),0 0 150px 50px rgba(255,110,30,.22);animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-14px)}}
+.planet{transition:opacity .8s}.nop .planet{opacity:0}
+.scr{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;
+padding:max(1.2rem,env(safe-area-inset-top)) 1.2rem max(1.2rem,env(safe-area-inset-bottom));opacity:0;pointer-events:none;transition:opacity .9s}
+.scr.on{opacity:1;pointer-events:auto}
+.big{font-family:'Great Vibes',cursive;font-size:clamp(4rem,16vw,8.5rem);line-height:1;text-shadow:0 0 18px #e9b8ff,0 0 50px #a45cf0}
+.sub{font-family:'Dancing Script',cursive;font-size:clamp(1.6rem,6vw,2.6rem);text-shadow:0 0 14px rgba(230,170,255,.7)}
+.hint{opacity:.8;font-size:1rem}
+.gift{font-size:5rem;background:none;border:0;cursor:pointer;filter:drop-shadow(0 0 22px rgba(255,200,90,.6));animation:float 3s ease-in-out infinite}
+h2{font-size:clamp(1.5rem,5vw,2.2rem);letter-spacing:.04em;text-shadow:0 0 16px #c98bff}
+.card{width:min(640px,100%);max-height:58vh;overflow:auto;text-align:left;padding:1.2rem 1.4rem;line-height:1.75;font-size:1.05rem;
+background:rgba(14,8,40,.72);border:1px solid rgba(200,160,255,.3);border-radius:14px;scrollbar-width:thin;scrollbar-color:#a77bf0 transparent}
+.card p+p{margin-top:1em}
+.btn{font-family:inherit;font-size:1.1rem;color:#fff;border:0;cursor:pointer;padding:.8rem 2rem;border-radius:999px;background:linear-gradient(90deg,#b86bff,#ff72b8);box-shadow:0 0 26px rgba(200,110,255,.5)}
+.btn:focus-visible,.gift:focus-visible,#mute:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.end{font-size:clamp(2.6rem,11vw,5rem);letter-spacing:.2em;text-shadow:0 0 24px #ff8fd0}
+.date{font-size:1.2rem;letter-spacing:.3em;opacity:.85}
+#mute{position:fixed;top:max(.8rem,env(safe-area-inset-top));right:.8rem;width:44px;height:44px;border-radius:50%;border:0;font-size:1.2rem;cursor:pointer;background:rgba(255,255,255,.12);color:#fff;z-index:5}
+.fin{font-size:clamp(1.7rem,6.5vw,3.4rem);line-height:1.15;text-transform:uppercase;font-weight:700;max-width:900px;text-shadow:0 0 24px #ff6fb5,0 0 55px #c0399b}
+.fin2{font-size:clamp(1.1rem,4vw,1.8rem);font-weight:700;max-width:760px;line-height:1.35;text-shadow:0 0 20px #ff6fb5}
+.heart{position:relative;width:min(70vw,360px);filter:drop-shadow(0 0 28px rgba(255,170,215,.85))}
+.heart svg{display:block;width:100%}
+.heart div{position:absolute;left:0;right:0;top:34%;color:#d6336c;font-weight:700;font-size:clamp(1.5rem,6.5vw,2.4rem);letter-spacing:.06em}
+.fh{position:fixed;bottom:-2rem;pointer-events:none;animation:rise linear forwards;z-index:1}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.gal,.planet,.gift{animation:none}.fh{display:none}}
+</style>
+</head>
+<body>
+<canvas id="sky"></canvas>
+<div class="wrap w1"><div class="gal"></div></div>
+<div class="wrap w2"><div class="gal"></div></div>
+<div class="wrap w3"><div class="gal"></div></div>
+<div class="planet p1"></div><div class="planet p2"></div>
+<button id="mute" aria-label="Som">🔊</button>
+<audio id="bgm" src="musica.mp3" loop preload="auto"></audio>
+
+<section class="scr on" id="s1">
+  <div class="big">Te quero</div>
+  <div class="sub">Tenho uma surpresa pra voce, pequena...</div>
+  <button class="gift" id="gift" aria-label="Abrir o presente">🎁</button>
+  <p class="hint">Toque no presente para comecar ✨</p>
+</section>
+
+<section class="scr" id="s2">
+  <h2>Pra voce 🤍</h2>
+  <div class="card">
+    <p>Quando te conheci jogando, me chamou a atencão como voce era: o quanto era engracada e meiga. O tempo que a gente passava junto era algo que eu gostava e curtia passar com voce.</p>
+    <p>Teve um momento em que eu quis ficar com voce por tudo o que vinha acontecendo e pela forma como a gente se tratava. Lembro do dia em que voce me disse que eu seria só um amigo, e eu entendi. Mesmo assim, eu fiquei, sabendo que podia me machucar e continuar me iludindo, até que chegou um momento em que deixei de falar com voce para poder pensar no que eu sentia. Eu nunca te disse como me sentia, e talvez não falar sobre isso tenha sido errado. Por isso, naquela época, me dediquei mais às minhas coisas, ou tinha outros problemas.</p>
+    <p>Sei que gosto de voce e que te amo. Sei que às vezes sou estranho, e que agora não falo com voce como antes, mas isso não tira o que sinto por voce. Sei que sou frio e que não te escrevo muito, e isso fez com que eu deixasse de ser importante pra voce. Tudo bem; afinal, acho que fui eu o culpado.</p>
+    <p>Agora voce conheceu outra pessoa, e tudo bem. Voce faz o que quiser, sempre foi livre nas decisões que tomava. Sei que voce está bem, ou pelo menos foi o que me disse, e isso me deixa feliz. Quero o melhor pra voce.</p>
+    <p>A verdade é que eu não imaginava que isso teria esse final. Por isso fiz esta página pra voce, este código. Sempre te amei, mas agora voce quer outra pessoa.</p>
+  </div>
+  <p class="sub">Te amo ❤️</p>
+  <button class="btn" id="next">Toque para continuar 💖</button>
+</section>
+
+<section class="scr" id="s3">
+  <div class="fin">Lembro do dia em que te conheci</div>
+  <div class="date">13 · fevereiro · 2026</div>
+  <div class="fin2">Voce é a melhor pessoa que conheci 🤍</div>
+  <button class="btn" id="next2">Toque para continuar 💖</button>
+</section>
+
+<section class="scr" id="s5" aria-label="Obrigado"></section>
+
+<script>
+let fx=false,P=[],T=[],cur=1,wt;
+const $=id=>document.getElementById(id), bgm=$('bgm');
+function go(n){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));$('s'+n).classList.add('on');document.body.classList.toggle('nop',n==4);fx=(n>=4);cur=n;clearTimeout(wt);if(n==5)wt=setTimeout(spell,700)}
+$('gift').onclick=()=>{bgm.play().catch(()=>{});go(2)};
+$('next').onclick=()=>go(3);
+$('next2').onclick=()=>go(5);
+$('mute').onclick=()=>{bgm.muted=!bgm.muted;$('mute').textContent=bgm.muted?'🔇':'🔊'};
+
+const c=$('sky'),x=c.getContext('2d');let W,H,S=[],shoot=null;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight;
+S=Array.from({length:Math.min(300,W*H/5500|0)},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.4+.3,p:Math.random()*6.28,s:Math.random()*.004+.001}))}
+function draw(t){x.clearRect(0,0,W,H);x.fillStyle='#fff';
+for(const s of S){x.globalAlpha=.35+.65*Math.abs(Math.sin(s.p+t*s.s));x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fill()}
+if(!shoot&&Math.random()<.003)shoot={x:Math.random()*W,y:Math.random()*H*.4,l:0};
+if(shoot){const g=x.createLinearGradient(shoot.x,shoot.y,shoot.x-90,shoot.y-45);g.addColorStop(0,'rgba(255,255,255,.9)');g.addColorStop(1,'transparent');
+x.globalAlpha=1;x.strokeStyle=g;x.lineWidth=2;x.beginPath();x.moveTo(shoot.x,shoot.y);x.lineTo(shoot.x-90,shoot.y-45);x.stroke();
+shoot.x+=14;shoot.y+=7;if(++shoot.l>60)shoot=null}
+if(fx){if(Math.random()<.025){const bx=Math.random()*W,by=Math.random()*H*.55,col=['#ff8fd0','#8fd8ff','#ffe28a','#c9a3ff'][Math.random()*4|0];
+for(let i=0;i<36;i++){const a=i/36*6.283,v=1.5+Math.random()*1.5;P.push({x:bx,y:by,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:60,c:col})}}
+for(const p of P){p.x+=p.vx;p.y+=p.vy;p.vy+=.03;p.vx*=.985;p.l--;x.globalAlpha=Math.max(p.l/60,0);x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,1.8,0,6.283);x.fill()}
+P=P.filter(p=>p.l>0)}
+for(const p of T){p.t++;let px,py;
+if(p.t<70){const e=1-Math.pow(1-p.t/70,3);px=p.sx+(p.tx-p.sx)*e;py=p.sy+(p.ty-p.sy)*e}
+else{px=p.tx;py=p.ty+(p.t>230?(p.t-230)*(p.t-230)*.02:0)}
+x.globalAlpha=p.t>230?Math.max(1-(p.t-230)/60,0):(p.t>70?.8+.2*Math.sin(p.t*.3+p.tx):1);
+x.fillStyle=p.c;x.fillRect(px,py,2.4,2.4)}
+T=T.filter(p=>p.t<290);
+requestAnimationFrame(draw)}
+function spell(){if(cur!=5)return;word('Obrigado');wt=setTimeout(spell,11000)}
+function word(txt){const F='"Playfair Display",Georgia,serif',run=()=>{
+const o=document.createElement('canvas'),g=o.getContext('2d');
+g.font='700 100px '+F;const m=g.measureText(txt).width,fs=Math.min(100*W*.84/m,170);
+o.width=W;o.height=Math.ceil(fs*1.5);g.font='700 '+fs+'px '+F;g.textAlign='center';g.textBaseline='middle';g.fillText(txt,W/2,o.height/2);
+const d=g.getImageData(0,0,o.width,o.height).data,oy=H/2-o.height/2,cols=['#ffffff','#ffc2e6','#ff8fd0','#ffe28a'];
+for(let yy=0;yy<o.height;yy+=5)for(let xx=0;xx<W;xx+=5)if(d[(yy*o.width+xx)*4+3]>128)
+T.push({sx:W/2+(Math.random()-.5)*30,sy:H/2+(Math.random()-.5)*30,tx:xx,ty:oy+yy,t:0,c:cols[Math.random()*4|0]})};
+document.fonts?document.fonts.load('700 100px '+F).then(run,run):run()}
+setInterval(()=>{if(!fx)return;const e=document.createElement('span');e.className='fh';e.textContent=['💖','🤍','💗'][Math.random()*3|0];
+e.style.left=Math.random()*100+'vw';e.style.fontSize=(1+Math.random()*1.4)+'rem';e.style.animationDuration=(6+Math.random()*5)+'s';
+document.body.appendChild(e);setTimeout(()=>e.remove(),11500)},600);
+addEventListener('resize',size);size();requestAnimationFrame(draw);
+</script>
+</body>
+</html>
