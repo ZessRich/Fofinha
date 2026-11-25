@@ -77,11 +77,11 @@ background:rgba(14,8,40,.72);border:1px solid rgba(200,160,255,.3);border-radius
 <section class="scr" id="s2">
   <h2>Pra voce 🤍</h2>
   <div class="card">
-    <p>Quando te conheci jogando, me chamou a atencão como voce era: o quanto era engracada e meiga. O tempo que a gente passava junto era algo que eu gostava e curtia passar com voce.</p>
-    <p>Teve um momento em que eu quis ficar com voce por tudo o que vinha acontecendo e pela forma como a gente se tratava. Lembro do dia em que voce me disse que eu seria só um amigo, e eu entendi. Mesmo assim, eu fiquei, sabendo que podia me machucar e continuar me iludindo, até que chegou um momento em que deixei de falar com voce para poder pensar no que eu sentia. Eu nunca te disse como me sentia, e talvez não falar sobre isso tenha sido errado. Por isso, naquela época, me dediquei mais às minhas coisas, ou tinha outros problemas.</p>
-    <p>Sei que gosto de voce e que te amo. Sei que às vezes sou estranho, e que agora não falo com voce como antes, mas isso não tira o que sinto por voce. Sei que sou frio e que não te escrevo muito, e isso fez com que eu deixasse de ser importante pra voce. Tudo bem; afinal, acho que fui eu o culpado.</p>
+    <p>Quando te conheci jogando, me chamou a atencao como voce era: o quanto era engracada e meiga. O tempo que a gente passava junto era algo que eu gostava e curtia passar com voce.</p>
+    <p>Teve um momento em que eu quis ficar com voce por tudo o que vinha acontecendo e pela forma como a gente se tratava. Lembro do dia em que voce me disse que eu seria só um amigo, e eu entendi. Mesmo assim, eu fiquei, sabendo que podia me machucar e continuar me iludindo, até que chegou um momento em que deixei de falar com voce para poder pensar no que eu sentia. Eu nunca te disse como me sentia, e talvez nao falar sobre isso tenha sido errado. Por isso, naquela época, me dediquei mais às minhas coisas, ou tinha outros problemas.</p>
+    <p>Sei que gosto de voce e que te amo. Sei que às vezes sou estranho, e que agora nao falo com voce como antes, mas isso nao tira o que sinto por voce. Sei que sou frio e que nao te escrevo muito, e isso fez com que eu deixasse de ser importante pra voce. Tudo bem; afinal, acho que fui eu o culpado.</p>
     <p>Agora voce conheceu outra pessoa, e tudo bem. Voce faz o que quiser, sempre foi livre nas decisões que tomava. Sei que voce está bem, ou pelo menos foi o que me disse, e isso me deixa feliz. Quero o melhor pra voce.</p>
-    <p>A verdade é que eu não imaginava que isso teria esse final. Por isso fiz esta página pra voce, este código. Sempre te amei, mas agora voce quer outra pessoa.</p>
+    <p>A verdade é que eu nao imaginava que isso teria esse final. Por isso fiz esta página pra voce, este código. Sempre te amei, mas agora voce quer outra pessoa.</p>
   </div>
   <p class="sub">Te amo ❤️</p>
   <button class="btn" id="next">Toque para continuar 💖</button>
@@ -100,11 +100,11 @@ background:rgba(14,8,40,.72);border:1px solid rgba(200,160,255,.3);border-radius
 let fx=false,P=[],T=[],cur=1,wt;
 const $=id=>document.getElementById(id), bgm=$('bgm');
 function go(n){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));$('s'+n).classList.add('on');document.body.classList.toggle('nop',n==4);fx=(n>=4);cur=n;clearTimeout(wt);if(n==5)wt=setTimeout(spell,700)}
+bgm.volume=.3;
 $('gift').onclick=()=>{bgm.play().catch(()=>{});go(2)};
 $('next').onclick=()=>go(3);
 $('next2').onclick=()=>go(5);
 $('mute').onclick=()=>{bgm.muted=!bgm.muted;$('mute').textContent=bgm.muted?'🔇':'🔊'};
-bgm.volume=.1;
 
 const c=$('sky'),x=c.getContext('2d');let W,H,S=[],shoot=null;
 function size(){W=c.width=innerWidth;H=c.height=innerHeight;
