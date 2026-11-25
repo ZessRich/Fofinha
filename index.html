@@ -104,6 +104,7 @@ $('gift').onclick=()=>{bgm.play().catch(()=>{});go(2)};
 $('next').onclick=()=>go(3);
 $('next2').onclick=()=>go(5);
 $('mute').onclick=()=>{bgm.muted=!bgm.muted;$('mute').textContent=bgm.muted?'🔇':'🔊'};
+bgm.volume=.3;
 
 const c=$('sky'),x=c.getContext('2d');let W,H,S=[],shoot=null;
 function size(){W=c.width=innerWidth;H=c.height=innerHeight;
